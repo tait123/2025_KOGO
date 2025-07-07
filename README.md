@@ -45,11 +45,11 @@ samtools index dedup.SRR622461_sub.bam
 
 ```
 gatk BaseRecalibrator \
--R /BiO/home/edu{i}/data/hg38/hg38.fa \
+-R /BiO/home/edu{i}/2025_KOGO_workshop/wgs/data/hg38/hg38.fa \
 -I dedup.SRR622461_sub.bam \
---known-sites /BiO/home/edu{i}/data/hg38/dbsnp_146.hg38.vcf.gz \
---known-sites /BiO/home/edu{i}/data/hg38/1000G_phase1.snps.high_confidence.hg38.vcf.gz \
---known-sites /BiO/home/edu{i}/data/hg38/Mills_and_1000G_gold_standard.indels.hg38.vcf.gz \
+--known-sites /BiO/home/edu{i}/2025_KOGO_workshop/wgs/data/hg38/dbsnp_146.hg38.vcf.gz \
+--known-sites /BiO/home/edu{i}/2025_KOGO_workshop/wgs/data/hg38/1000G_phase1.snps.high_confidence.hg38.vcf.gz \
+--known-sites /BiO/home/edu{i}/2025_KOGO_workshop/wgs/data/hg38/Mills_and_1000G_gold_standard.indels.hg38.vcf.gz \
 -O SRR622461_sub.recal.table
 
 # edu 번호를 본인에 맞게 바꾸어주셔야합니다
@@ -57,7 +57,7 @@ gatk BaseRecalibrator \
 
 ```
 gatk ApplyBQSR \
--R /BiO/home/edu{i}/data/hg38/hg38.fa \
+-R /BiO/home/edu{i}/2025_KOGO_workshop/wgs/data/hg38/hg38.fa \
 -I dedup.SRR622461_sub.bam \
 -O SRR622461_sub.cram \
 -bqsr ./SRR622461_sub.recal.table
