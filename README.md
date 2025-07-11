@@ -1,4 +1,4 @@
-# 2025_KOGO
+# 2025_KOGO_WGS
 
 ### 0. Type this code to enter your instance
 
