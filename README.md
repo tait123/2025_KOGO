@@ -12,11 +12,11 @@ ssh -p 7024 <계정번호>@[public_ip]
 ```
 bwa mem -t 8 -M -Y -K 100000000 \
  -R '@RG\tID:NA12878\tPL:ILLUMINA\tPU:NA12878\tSM:NA12878\tLB:NA12878' \
-/BiO/home/edu{i}/2025_KOGO_workshop/wgs/data/hg38/hg38.fa \
-<(zcat /BiO/home/edu{i}/2025_KOGO_workshop/wgs/SRR622461_sub_1.fastq.gz) \
-<(zcat /BiO/home/edu{i}/2025_KOGO_workshop/wgs/SRR622461_sub_2.fastq.gz) \
+~/2025_KOGO_workshop/wgs/data/hg38/hg38.fa \
+<(zcat ~/2025_KOGO_workshop/wgs/data/SRR11880780/SRR11880780_1.fastq.gz) \
+<(zcat ~/2025_KOGO_workshop/wgs/data/SRR11880780/SRR11880780_2.fastq.gz) \
 | samtools view -huS - \
-| samtools sort -@ 2 -m 2G -o SRR622461_sub.bam -O bam -T SRR622461_sub.tmp
+| samtools sort -@ 2 -m 2G -o SRR11880780.bam -O bam -T SRR11880780.tmp
 
 # edu 번호를 본인에 맞게 바꾸어주셔야합니다
 ```
