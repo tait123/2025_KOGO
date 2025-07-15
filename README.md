@@ -17,8 +17,6 @@ bwa mem -t 8 -M -Y -K 100000000 \
 <(zcat ~/2025_KOGO_workshop/wgs/data/SRR11880780/SRR11880780_2.fastq.gz) \
 | samtools view -huS - \
 | samtools sort -@ 2 -m 2G -o SRR11880780.bam -O bam -T SRR11880780.tmp
-
-# edu 번호를 본인에 맞게 바꾸어주셔야합니다
 ```
 
 ### 2. Markduplicates
