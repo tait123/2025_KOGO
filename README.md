@@ -11,7 +11,7 @@ ssh -p 7024 <계정번호>@[public_ip]
 
 ```
 bwa mem -t 8 -M -Y -K 100000000 \
- -R '@RG\tID:NA12878\tPL:ILLUMINA\tPU:NA12878\tSM:NA12878\tLB:NA12878' \
+ -R '@RG\tID:SRR11880780\tPL:ILLUMINA\tPU:SRR11880780\tSM:SRR11880780\tLB:SRR11880780' \
 ~/2025_KOGO_workshop/wgs/data/hg38/hg38.fa \
 <(zcat ~/2025_KOGO_workshop/wgs/data/SRR11880780/SRR11880780_1.fastq.gz) \
 <(zcat ~/2025_KOGO_workshop/wgs/data/SRR11880780/SRR11880780_2.fastq.gz) \
